@@ -1,0 +1,1 @@
+teste.sql; Little-endian UTF-16 Unicode C program text, with CRLF line terminators

@@ -1,0 +1,35 @@
+http://microteknologias.wordpress.com/2010/12/04/comando-file-para-windows-descubriendo-el-tipo-de-un-archivo/
+
+	
+Artículos y noticias sobre Linux, Software Libre, Informática y otros
+
+    Inicio
+    Contacto
+    Guía Enlaces
+    Requerimientos Linux
+    Servicios
+
+Comando File para Windows, descubriendo el tipo de un archivo
+4/diciembre/2010
+
+El otro día tuve un problema con mi disco duro externo, utilice una herramienta para recuperar archivos eliminados por error. Afortunadamente logre restaurarlos, sin embargo, un grupo de archivos fueron recuperados sin nombre y sin extensión. En Linux hubiera sido muy fácil determinar que tipo de archivos eran esos archivos, utilizando el comando “file”. Windows no tiene un sistema nativo para determinar el tipo de un archivo. Por suerte, gracias a GNU existe un port para Windows que permite realizar la misma función.
+
+Lo primero que debemos hacer es descargar el archivo desde la página de descarga (http://gnuwin32.sourceforge.net/packages/file.htm) y luego instalarlo en nuestro sistema.
+
+Ahora podemos utilizar file para determinar el tipo del archivo desconocido.
+
+Ya solo nos queda agregar la extensión que le corresponda al archivo, por ejemplo:
+
+    “.exe” para los “PE32 executable”,
+    “.zip” para los “Zip archive data”,
+    “.jpg” para los “JPEG image data”,
+    “.txt” para los “ASCII text” o “UTF-8 unicode text”,
+    “.mp3? para los “Audio file with ID3?
+    “.flv” para los “Macromedia Flash Video”
+    etc.
+
+Si el file indica que el archivo es “ELF 32-bit LSB executable, Intel 80386” significa que estás frente a un ejecutable para Linux. No es necesario agregar la extensión, y solo podrá ser ejecutado, obviamente, en Linux.
+
+
+
+

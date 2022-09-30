@@ -1,0 +1,44 @@
+http://dbaportal.eu/2012/10/24/iconv-for-windows/
+
+This is a short memo about installing iconv on Windows host (specifically: Windows 7 SP1 x64). Iconv is a handy Unix/Linux tool that is used for conversion between different character encodings.
+Unfortunately, I’m not always in a position to use my favorite Linux distro at job, so here is a short recipe on how to setup iconv port for Win32.
+
+    Download libiconv-1.9.1.bin.woe32.zip from Sourgeforge.net
+    Download support library gettext-runtime-0.13.1.bin.woe32.zip from here. Make sure that you download exactly the version 0.13.1 and NOT newer, due to some compatibility issues!
+    Create some directory, such as C:\UNIXUTIL\iconv
+    Unzip the content of \bin from both zip files and save the content together in above directory.
+
+    The final content of iconv directory should look like this:
+    C:\UNIXUTIL\iconv>dir
+     Volume in drive C has no label.
+     Volume Serial Number is A88E-6A42
+     
+     Directory of C:\UNIXUTIL\iconv
+     
+    11.10.2012  13:33    <DIR>          .
+    11.10.2012  13:33    <DIR>          ..
+    14.01.2004  21:59            28.672 asprintf.dll
+    14.01.2004  01:56            24.576 charset.dll
+    14.01.2004  21:59            20.480 envsubst.exe
+    14.01.2004  21:59            20.480 gettext.exe
+    07.10.2003  21:17             2.715 gettext.sh
+    14.01.2004  01:56           892.928 iconv.dll
+    14.01.2004  01:56            16.384 iconv.exe
+    14.01.2004  21:59            45.056 intl.dll
+    14.01.2004  21:59            20.480 ngettext.exe
+                  11 File(s)      1.071.780 bytes
+                   2 Dir(s)  57.396.654.080 bytes free
+     
+    C:\UNIXUTIL\iconv>
+
+    Usage:
+    C:\UNIXUTIL\iconv>iconv --help
+    Usage: iconv [--binary] [-c] [-s] [-f fromcode] [-t tocode] [file ...]
+    or:    iconv -l
+
+    List of supported code pages:
+    C:\UNIXUTIL\iconv>iconv -l
+
+    Example of converting file from utf-8 to cp1250 encoding:
+    C:\UNIXUTIL\iconv>iconv -f utf-8 -t cp1250 utf-8.txt > cp1250.txt
+
