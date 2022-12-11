@@ -1,0 +1,28 @@
+{
+  "name": "tools-windows",
+  "version": "1.0.0",
+  "description": "Repositório destinado a ferramentas que são utilizadas no Windows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexfdealmeida/tools-windows.git"
+  },
+  "author": "alex.almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexfdealmeida/tools-windows/issues"
+  },
+  "homepage": "https://github.com/alexfdealmeida/tools-windows#readme",
+  "devDependencies": {
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./copy-git-hooks.sh --update-only-git-hooks",
+      "post-checkout": "./copy-git-hooks.sh --update-only-git-hooks"
+    }
+  }
+}
