@@ -2,3 +2,9 @@
 *.bak
 node_modules/
 .tmp.drivedownload
+
+#cmder
+cmder/config/clink.log
+cmder/config/clink_history
+cmder/config/user-ConEmu.xml
+cmder/vendor/conemu-maximus5/ConEmu.xml
