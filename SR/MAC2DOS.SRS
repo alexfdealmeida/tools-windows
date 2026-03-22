@@ -1,6 +1,0 @@
-[Script for Search and Replace]
-[Search /x]
-\r*[\n]!(\r\n)
-[Replace]
-\r\n
-[End of Search and Replace Script]
