@@ -1,10 +1,13 @@
 # tools-windows
 Este repositório armazena ferramentas e utilitários (portable) quem podem ser utilizadas no Windows.
 
-## tools
-- cpu-z
-- PuTTY
-- 
+## Estrutura
+.
+├── cpu-z/
+├── PuTTY/ 
+├── unix-util/ 
+│   ├── iconv/
+├── WinSCP/ 
 
 ## Como obter uma cópia
 
