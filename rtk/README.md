@@ -15,7 +15,15 @@ dev-0.44.0-rc.309
 ### Linux/WSL
 ```bash
 curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh
+```
 
+> Installs to ~/.local/bin. Add to PATH if needed:
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc  # or ~/.zshrc
+```
+
+### Both
+```bash
 rtk init -g
 
 rtk --version
